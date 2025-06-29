@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Yasmina Wehbe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+
+      /* center container vertically and horizontally */
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      padding: 15px 0;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .navbar li {
+      margin: 0 1.5rem;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #c1b49a;
+    }
+
+    main.about-container {
+      max-width: 900px;
+      width: 100%;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #222;
+      font-weight: 700;
+    }
+
+    h2.accordion {
+      cursor: pointer;
+      padding: 16px 20px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #000;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin: 0 0 10px 0;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h2.accordion:hover {
+      background-color: #eee;
+    }
+
+    h2.accordion::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: #000;
+      transition: transform 0.3s ease;
+    }
+
+    h2.accordion.active::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+
+    .panel {
+      padding: 0 20px 20px 20px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      border-bottom: 1px solid #eee;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    .job {
+      margin-top: 10px;
+    }
+
+    .job h3 {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      color: #222;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .job-date {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 24px;
+      color: #444;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+
+    ul li:hover {
+      color: #000;
+    }
+
+    ul.certificates, ul.languages {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.certificates li, ul.languages li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 1rem;
+    }
+
+    ul.certificates li:last-child, ul.languages li:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+      color: #888;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+      font-family: 'Montserrat', sans-serif;
+      max-width: 900px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer a {
+      color: #c1b49a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #8b7b50;
+    }
+
+    @media (max-width: 600px) {
+      h2.accordion {
+        font-size: 1.3rem;
+        padding: 14px 16px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-container">
+    <h1>About Me</h1>
+    <p>
+      I am a motivated, multi-cultured, and ambitious 20-year-old economics student at University of Paris I: Panthéon-Sorbonne.
+      Passionate about problem-solving, critical thinking, and the world of consulting.
+    </p>
+
+    <h2 class="accordion">Education</h2>
+<div class="panel">
+  <div class="job">
+    <h3>Université Paris 1 Panthéon-Sorbonne</h3>
+    <p class="job-date">2023 – 2026</p>
+    <ul>
+      <li>Bachelor of Economics with a Minor in Management</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Grand Lycée Franco-Libanais</h3>
+    <p class="job-date">2011 – 2023</p>
+    <ul>
+      <li>French Baccalauréat – Specialised in Mathematics & Economics</li>
+      <li>Graduated with Honours</li>
+    </ul>
+  </div>
+</div>
+
+    <h2 class="accordion">Experience</h2>
+    <div class="panel">
+      <div class="job">
+        <h3>Risk Consulting Intern — EY Beirut</h3>
+        <p class="job-date">June – July 2025</p>
+        <ul>
+          <li>Assisted on consulting projects across departments through research and presentation preparation.</li>
+          <li>Conducted analytical research to support strategic recommendations.</li>
+          <li>Participated in internal workshops and shadowed client sessions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="accordion">Volunteering</h2>
+    <div class="panel">
+      <div class="job">
+        <h3>Association des Guides du Liban</h3>
+        <p class="job-date">2013 – 2023</p>
+        <ul>
+          <li>Participated in the Annual Food Bank, feeding over 500 families during the festive season.</li>
+          <li>Organized community service projects aligned with UN Sustainable Development Goals (SDGs).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="accordion">Licenses & Certifications</h2>
+    <div class="panel">
+      <ul class="certificates">
+        <li>Introduction to Finance: The Basics — Gies College of Business (June 2025)</li>
+        <li>Introduction to Generative AI for Data Analysis — Microsoft (June 2025)</li>
+        <li>Delegate — GCLAUMUN Certificate of Participation (June 2022)</li>
+      </ul>
+    </div>
+
+    <h2 class="accordion">Languages</h2>
+    <div class="panel">
+      <ul class="languages">
+        <li><strong>Arabic:</strong> Native</li>
+        <li><strong>English:</strong> Fluent</li>
+        <li><strong>French:</strong> Fluent</li>
+        <li><strong>Spanish:</strong> Elementary proficiency</li>
+      </ul>
+    </div>
+
+    <h2 class="accordion">Skills</h2>
+    <div class="panel">
+      <ul>
+        <li>Microsoft Excel (Data Analysis, Pivot Tables)</li>
+        <li>PowerPoint (Executive Presentations)</li>
+        <li>Google Workspace (Docs, Sheets, Slides)</li>
+        <li>SEO & KPI Strategy</li>
+        <li>Generative AI for Data Analysis</li>
+        <li>Problem Solving & Strategic Thinking</li>
+        <li>Market & Risk Research</li>
+        <li>Project Coordination</li>
+        <li>Report Writing & Presenting</li>
+        <li>HTML & CSS</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+  <p>
+    Contact me: 
+    <a href="tel:+33623426614">+33 623426614</a> | 
+    <a href="mailto:yasminawehbe05@gmail.com">yasminawehbe05@gmail.com</a> | 
+    <a href="https://www.linkedin.com/in/yasmina-w-053692315/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </p>
+</footer>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach(acc => {
+      acc.addEventListener('click', () => {
+        const panel = acc.nextElementSibling;
+        const isActive = acc.classList.contains('active');
+
+        // Close all panels
+        accordions.forEach(a => {
+          a.classList.remove('active');
+          a.nextElementSibling.style.maxHeight = null;
+        });
+
+        // Toggle current panel
+        if (!isActive) {
+          acc.classList.add('active');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
