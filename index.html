@@ -5,7 +5,7 @@
   <title>Yasmina Wehbe | Consulting, Finance & Strategy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-        content="Yasmina Wehbe — Economics & Management student at Pantheon-Sorbonne, with experience in consulting and a focus on strategy, finance, and risk." />
+        content="Yasmina Wehbe — Economics & Management student at Panthéon-Sorbonne with experience in consulting and a focus on strategy, finance, and risk." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,22 +14,26 @@
       --bg: #020817;
       --bg-soft: #070b16;
       --accent: #6366f1;
-      --accent-soft: rgba(99, 102, 241, 0.12);
+      --accent-soft: rgba(99,102,241,0.12);
       --text: #e5e7eb;
       --muted: #9ca3af;
-      --border-subtle: rgba(148, 163, 253, 0.16);
+      --border-subtle: rgba(148,163,253,0.18);
       --radius-xl: 22px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.6);
+      --shadow-soft: 0 20px 55px rgba(15,23,42,0.7);
       --transition-fast: 0.25s ease;
       --max-width: 1120px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background:
-        radial-gradient(circle at top, #0f172a 0, #020817 40%, #000 100%);
+        radial-gradient(circle at top, #111827 0, #020817 40%, #000 100%);
       color: var(--text);
       min-height: 100vh;
       display: flex;
@@ -72,16 +76,24 @@
       color: var(--muted);
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     nav a {
-      margin-left: 14px;
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--muted);
       text-decoration: none;
-      transition: color var(--transition-fast), transform var(--transition-fast);
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
     }
 
     nav a:hover {
       color: var(--accent);
+      border-color: var(--accent);
       transform: translateY(-1px);
     }
 
@@ -95,12 +107,12 @@
       border-radius: var(--radius-xl);
       background: linear-gradient(
         135deg,
-        rgba(7, 11, 22, 0.98),
-        rgba(9, 9, 15, 0.98)
+        rgba(7,11,22,0.98),
+        rgba(9,9,15,0.98)
       );
       box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(75,85,99,0.6);
       margin-bottom: 24px;
-      border: 1px solid rgba(75, 85, 99, 0.5);
       align-items: center;
     }
 
@@ -112,7 +124,7 @@
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent);
-      font-size: 9px;
+      font-size: 8.5px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       margin-bottom: 8px;
@@ -129,7 +141,7 @@
       font-size: 12px;
       color: var(--muted);
       margin-bottom: 16px;
-      max-width: 520px;
+      max-width: 540px;
     }
 
     .hero-subtitle span {
@@ -147,7 +159,7 @@
     .btn {
       padding: 8px 16px;
       border-radius: 999px;
-      font-size: 11px;
+      font-size: 10.5px;
       border: 1px solid transparent;
       cursor: pointer;
       text-decoration: none;
@@ -161,12 +173,12 @@
       background: var(--accent);
       color: #020817;
       font-weight: 500;
-      box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+      box-shadow: 0 14px 32px rgba(99,102,241,0.4);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(99, 102, 241, 0.45);
+      box-shadow: 0 18px 42px rgba(99,102,241,0.55);
     }
 
     .btn-ghost {
@@ -195,8 +207,8 @@
     .mini-card {
       padding: 9px 10px;
       border-radius: 16px;
-      background: rgba(5, 7, 16, 0.98);
-      border: 1px solid rgba(75, 85, 99, 0.55);
+      background: rgba(5,7,16,0.98);
+      border: 1px solid rgba(75,85,99,0.6);
       font-size: 9.5px;
       color: var(--muted);
     }
@@ -217,7 +229,7 @@
       margin-bottom: 2px;
     }
 
-    /* LAYOUT BELOW HERO */
+    /* MAIN LAYOUT */
 
     main {
       display: grid;
@@ -226,15 +238,15 @@
       align-items: flex-start;
     }
 
-    section {
+    section.block {
       background: var(--bg-soft);
       border-radius: 18px;
       padding: 12px 13px 14px;
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 12px 30px rgba(15,23,42,0.6);
     }
 
-    section + section {
+    section.block + section.block {
       margin-top: 8px;
     }
 
@@ -265,18 +277,6 @@
       color: var(--muted);
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 2px 7px;
-      border-radius: 999px;
-      font-size: 8px;
-      color: var(--muted);
-      border: 1px solid rgba(75, 85, 99, 0.7);
-      margin-right: 4px;
-      margin-top: 2px;
-    }
-
     .skills-wrap {
       display: flex;
       flex-wrap: wrap;
@@ -289,8 +289,8 @@
       border-radius: 999px;
       font-size: 8px;
       color: var(--muted);
-      background: rgba(9, 9, 11, 0.9);
-      border: 1px solid rgba(63, 63, 70, 0.85);
+      background: rgba(9,9,11,0.96);
+      border: 1px solid rgba(63,63,70,0.9);
     }
 
     .contact-line {
@@ -309,7 +309,7 @@
     }
 
     footer {
-      margin-top: 14px;
+      margin-top: 16px;
       font-size: 8px;
       color: var(--muted);
       text-align: right;
@@ -321,27 +321,27 @@
         align-items: flex-start;
       }
 
-      nav {
-        display: flex;
-        flex-wrap: wrap;
+      main {
+        grid-template-columns: 1fr;
       }
 
       .hero {
         grid-template-columns: 1fr;
       }
 
-      main {
-        grid-template-columns: 1fr;
+      body {
+        padding: 22px 10px 26px;
       }
 
-      body {
-        padding: 20px 10px 26px;
+      nav {
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
+    <!-- HEADER -->
     <header>
       <div class="brand">
         <div class="logo">YASMINA WEHBE</div>
@@ -358,17 +358,19 @@
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
       <div>
-        <div class="hero-label">Early-career consulting & finance profile</div>
+        <div class="hero-label">Early-career profile · Consulting & Finance</div>
         <h1>Combining structured problem-solving with financial thinking.</h1>
         <p class="hero-subtitle">
           I’m Yasmina Wehbe, a third-year Economics & Management student at
-          <span>Pantheon-Sorbonne</span>, with experience in consulting and a growing focus on
-          <span>strategy, risk, and financial analysis</span> across international contexts.
+          <span>Panthéon-Sorbonne</span>, with experience in consulting and a growing focus on
+          <span>strategy, risk and transaction-related topics</span> across international contexts.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:yasminawehbe05@gmail.com?subject=Regarding%20opportunities">
+          <a class="btn btn-primary"
+             href="mailto:yasminawehbe05@gmail.com?subject=Regarding%20opportunities">
             Contact me
           </a>
           <a class="btn btn-ghost" href="projects.html">
@@ -383,14 +385,14 @@
         <div class="mini-card">
           <span>Profile</span>
           <strong>Consulting-minded & analytical</strong>
-          Experience in a Big Four consulting environment, working on research, analysis,
-          and client-facing deliverables in a high-standard, collaborative setting.
+          Experience in a Big Four consulting environment delivering research, benchmarking,
+          and client-ready material within fast-paced, high-standard teams.
         </div>
         <div class="mini-card">
           <span>Focus</span>
           <strong>Strategy · Finance · International</strong>
-          Interested in mandates at the intersection of strategy, risk management,
-          corporate finance, and cross-border projects in Europe & the Middle East.
+          Motivated by cross-border projects at the intersection of strategy, risk management,
+          and corporate/transaction advisory in Europe & the Middle East.
         </div>
       </div>
     </section>
@@ -398,41 +400,47 @@
     <main>
       <!-- LEFT COLUMN -->
       <div>
-        <section id="about">
+        <!-- ABOUT -->
+        <section id="about" class="block">
           <h2>About</h2>
           <ul class="item-list">
             <li>
-              I enjoy breaking complex problems into clear structures, testing ideas with numbers,
-              and turning analysis into concise, decision-ready outputs.
+              I enjoy breaking complex topics into clear structures, stress-testing assumptions
+              with data, and translating analysis into concise, decision-ready insights.
             </li>
             <li>
-              I am particularly drawn to consulting, transaction services, and risk/strategy roles
-              that combine analytical depth with client interaction.
+              I’m building a path towards consulting and finance roles where I can combine
+              rigorous economics training, international exposure, and client-facing work.
             </li>
           </ul>
         </section>
 
-        <section id="experience">
+        <!-- EXPERIENCE (no accordion, always visible) -->
+        <section id="experience" class="block">
           <h2>Experience</h2>
           <ul class="item-list">
             <li>
               <div class="item-title">Consulting Intern – EY Consulting</div>
               <div class="item-meta">Dubai · 2024</div>
-              Contributed to research, benchmarking, and slide decks for transformation
-              and strategy-related engagements, collaborating with multi-disciplinary teams.
+              Contributed to strategy and transformation engagements through market research,
+              benchmarking, analytical support, and preparation of client deliverables in
+              collaboration with multi-disciplinary teams.
             </li>
-            <!-- Add more roles here when needed -->
+            <!-- Add more roles here if needed -->
           </ul>
         </section>
 
-        <section id="education">
+        <!-- EDUCATION -->
+        <section id="education" class="block">
           <h2>Education</h2>
           <ul class="item-list">
             <li>
               <div class="item-title">BSc Economics with Management Minor</div>
-              <div class="item-meta">Université Paris 1 Panthéon-Sorbonne · Expected June 2026</div>
-              Coursework in micro/macro, corporate finance, statistics, international economics,
-              and business/management, with a strong quantitative and analytical focus.
+              <div class="item-meta">
+                Université Paris 1 Panthéon-Sorbonne · Expected June 2026
+              </div>
+              Focus on microeconomics, macroeconomics, corporate finance,
+              statistics, international economics, and business/management.
             </li>
           </ul>
         </section>
@@ -440,46 +448,51 @@
 
       <!-- RIGHT COLUMN -->
       <div>
-        <section id="associations">
+        <!-- ASSOCIATIONS -->
+        <section id="associations" class="block">
           <h2>Associations</h2>
           <ul class="item-list">
             <li>
               <div class="item-title">[Association 1 Name]</div>
               <div class="item-meta">Member · [Year–Year]</div>
-              Involvement in consulting/finance-related activities, case workshops, and events.
+              Participation in consulting/finance events, case studies, and networking initiatives.
             </li>
             <li>
               <div class="item-title">[Association 2 Name]</div>
               <div class="item-meta">Member · [Year–Year]</div>
-              Engagement in student-led initiatives and projects aligned with strategy or impact.
+              Involvement in projects and activities aligned with strategy, impact, or leadership.
             </li>
           </ul>
         </section>
 
-        <section id="certifications">
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="block">
           <h2>Certifications</h2>
           <ul class="item-list">
             <li>
               <div class="item-title">[Certification Title]</div>
               <div class="item-meta">[Provider] · [Year]</div>
-              <!-- Example: Bloomberg Market Concepts, Excel / Financial Modeling, etc. -->
+              <!-- e.g. Bloomberg Market Concepts, Excel / Financial Modeling, etc. -->
             </li>
           </ul>
         </section>
 
-        <section id="skills">
+        <!-- SKILLS -->
+        <section id="skills" class="block">
           <h2>Skills</h2>
           <div class="skills-wrap">
             <span class="pill">Micro & Macro Economics</span>
             <span class="pill">Corporate Finance & Valuation Basics</span>
             <span class="pill">Risk & Strategy Concepts</span>
-            <span class="pill">Excel & Data Analysis</span>
-            <span class="pill">Research & Synthesis</span>
+            <span class="pill">Market & Benchmark Research</span>
+            <span class="pill">Excel & Data Handling</span>
+            <span class="pill">Slide-writing & Synthesis</span>
             <span class="pill">English · French</span>
           </div>
         </section>
 
-        <section id="contact">
+        <!-- CONTACT -->
+        <section id="contact" class="block">
           <h2>Contact</h2>
           <p class="contact-line">
             Email:
